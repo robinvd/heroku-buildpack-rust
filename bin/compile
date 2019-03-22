@@ -145,7 +145,7 @@ fi
 # Install diesel so we can use it for migrations
 echo "----- diesel: $RUST_INSTALL_DIESEL"
 if [ $RUST_INSTALL_DIESEL -eq 1 ]; then
-  echo "-----> Installing diesel"
+  echo "-----> Installing diesel: cargo install diesel_cli $DIESEL_FLAGS"
   cargo install diesel_cli $DIESEL_FLAGS || echo "already installed"
   cp $(which diesel) target/release/
 fi
